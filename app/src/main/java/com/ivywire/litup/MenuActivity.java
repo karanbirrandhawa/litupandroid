@@ -4,14 +4,22 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import com.ivywire.resources.FontManager;
 
+/**
+ *  Menu Activity shown to present initial game options
+ */
 public class MenuActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        TextView menuTitle = (TextView) findViewById(R.id.menuTitle);
+        FontManager.applyFont(this, menuTitle, "fonts/Raleway-ExtraBold.otf");
     }
 
 
