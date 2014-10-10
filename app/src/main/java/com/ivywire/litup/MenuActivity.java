@@ -1,9 +1,12 @@
 package com.ivywire.litup;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.ivywire.resources.FontManager;
@@ -12,14 +15,46 @@ import com.ivywire.resources.FontManager;
  *  Menu Activity shown to present initial game options
  */
 public class MenuActivity extends Activity {
+    static Activity ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        // Assign activity ctx
+        ctx = this;
 
+        // Apply fonts
         TextView menuTitle = (TextView) findViewById(R.id.menuTitle);
         FontManager.applyFont(this, menuTitle, "fonts/Raleway-ExtraBold.otf");
+
+        // Get menu action buttons
+        Button playButton = (Button) findViewById(R.id.menuPlayGame);
+        Button highScoreButton = (Button) findViewById(R.id.menuHighScores);
+        Button settingsButton = (Button) findViewById(R.id.menuSettings);
+
+        // Attach listeners to different buttons
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ctx, GameActivity.class);
+                startActivity(intent);
+            }
+        });
+        highScoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ctx, HighScoresActivity.class);
+                startActivity(intent);
+            }
+        });
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ctx, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

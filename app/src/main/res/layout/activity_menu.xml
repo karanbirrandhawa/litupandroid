@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
-        android:id="@+id/button2"
+        android:id="@+id/menuSettings"
         android:layout_marginBottom="42dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -36,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="High Scores"
-        android:id="@+id/button5"
-        android:layout_above="@+id/button2"
+        android:id="@+id/menuHighScores"
+        android:layout_above="@+id/menuSettings"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp" />
 
@@ -45,8 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Game"
-        android:id="@+id/button6"
-        android:layout_above="@+id/button5"
+        android:id="@+id/menuPlayGame"
+        android:layout_above="@+id/menuHighScores"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp" />
 </RelativeLayout>
