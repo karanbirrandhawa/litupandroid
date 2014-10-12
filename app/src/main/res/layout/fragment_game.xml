@@ -14,335 +14,359 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
 
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:layout_marginBottom="15dp">-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="15dp">
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"-->
-                    <!--android:id="@+id/dot1" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot0" />
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot1"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot2"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot3"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot4"/>
+            </LinearLayout>
 
-        <!--</TableRow>-->
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:layout_marginBottom="15dp">-->
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="15dp">
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot5"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot6"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot7"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot8"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot9"/>
+            </LinearLayout>
 
-        <!--</TableRow>-->
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:layout_marginBottom="15dp">-->
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="15dp">
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot10"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot11"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot12"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot13"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot14"/>
+            </LinearLayout>
 
-        <!--</TableRow>-->
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:layout_marginBottom="15dp">-->
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="15dp">
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot15"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot16"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot17"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot18"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot19"/>
+            </LinearLayout>
 
-        <!--</TableRow>-->
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent">-->
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot20"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot21"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot22"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView"/>-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot23"/>
+            </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:layout_gravity="center_horizontal">-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal">
 
-                <!--<view-->
-                    <!--android:layout_width="45dp"-->
-                    <!--android:layout_height="45dp"-->
-                    <!--class="com.ivywire.litup.game.views.DotView" />-->
-            <!--</LinearLayout>-->
+                <view
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    class="com.ivywire.litup.game.views.DotView"
+                    android:id="@+id/dot24"/>
+            </LinearLayout>
 
-        <!--</TableRow>-->
+        </TableRow>
     </TableLayout>
 </RelativeLayout>

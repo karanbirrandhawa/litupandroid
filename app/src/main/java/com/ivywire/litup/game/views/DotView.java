@@ -28,6 +28,10 @@ public class DotView extends View {
     private float positionY;
     private float radius;
 
+    public DotView(Context context) {
+        super(context);
+        this.context = context;
+    }
     public DotView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.getTheme().obtainStyledAttributes(
