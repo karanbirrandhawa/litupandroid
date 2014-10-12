@@ -27,42 +27,18 @@ import com.ivywire.litup.game.views.DotView;
  *
  */
 public class GameFragment extends Fragment implements View.OnClickListener{
-    // DotView array
+    // Int array to hold resource ids of all DotViews
     final int[] dotIdArray  = {
         R.id.dot0, R.id.dot1, R.id.dot2,  R.id.dot3,  R.id.dot4,  R.id.dot5,  R.id.dot6,
             R.id.dot7,  R.id.dot8,  R.id.dot9,  R.id.dot10,  R.id.dot11,  R.id.dot12,
             R.id.dot13,  R.id.dot14,  R.id.dot15,  R.id.dot16,  R.id.dot17,  R.id.dot18,
             R.id.dot19,  R.id.dot20,  R.id.dot21,  R.id.dot22,  R.id.dot23,  R.id.dot24
     };
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    // Boolean array to hold status of each dot
+    boolean[] dotStatusArray = new boolean[25];
+    
     private OnFragmentInteractionListener mListener;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GameFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GameFragment newInstance(String param1, String param2) {
-        GameFragment fragment = new GameFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
     public GameFragment() {
         // Required empty public constructor
     }
@@ -71,8 +47,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // Arguments
         }
     }
 
