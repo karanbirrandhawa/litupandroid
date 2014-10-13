@@ -18,6 +18,8 @@ import com.ivywire.litup.R;
 import com.ivywire.litup.game.logic.GameController;
 import com.ivywire.litup.game.views.DotView;
 
+import java.util.Arrays;
+
 public class GameFragment extends Fragment implements View.OnClickListener{
    // GameController handle game logic
     GameController gameController;
@@ -29,7 +31,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
             R.id.dot19,  R.id.dot20,  R.id.dot21,  R.id.dot22,  R.id.dot23,  R.id.dot24
     };
     // Boolean array to hold status of each dot
-    boolean[] dotStatusArray = new boolean[25];
+    Boolean[] dotStatusArray = new Boolean[25];
 
     private OnFragmentInteractionListener mListener;
 
@@ -51,6 +53,8 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_game, container, false);
         TableLayout table = (TableLayout) rootView.findViewById(R.id.dotTable);
+
+        Arrays.fill(dotStatusArray, false);
 
         for (int i = 0; i < 25; i++) {
             DotView dotView = (DotView) rootView.findViewById(dotIdArray[i]);
@@ -106,6 +110,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         // If array element is lit up light it down
         if (dotStatusArray[tag]) {
             dv.toggleLight();
+            dotStatusArray[tag] = new Boolean(!dotStatusArray[tag]);
         }
     }
 
