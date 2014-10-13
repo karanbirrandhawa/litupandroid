@@ -15,18 +15,12 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.ivywire.litup.R;
+import com.ivywire.litup.game.logic.GameController;
 import com.ivywire.litup.game.views.DotView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link GameFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link GameFragment#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
 public class GameFragment extends Fragment implements View.OnClickListener{
+   // GameController handle game logic
+    GameController gameController;
     // Int array to hold resource ids of all DotViews
     final int[] dotIdArray  = {
         R.id.dot0, R.id.dot1, R.id.dot2,  R.id.dot3,  R.id.dot4,  R.id.dot5,  R.id.dot6,
@@ -36,7 +30,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     };
     // Boolean array to hold status of each dot
     boolean[] dotStatusArray = new boolean[25];
-    
+
     private OnFragmentInteractionListener mListener;
 
     public GameFragment() {
@@ -47,7 +41,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            // Arguments
+            // TODO: Add arguments to specify stage/game logic
         }
     }
 
@@ -60,11 +54,25 @@ public class GameFragment extends Fragment implements View.OnClickListener{
 
         for (int i = 0; i < 25; i++) {
             DotView dotView = (DotView) rootView.findViewById(dotIdArray[i]);
+            dotView.setTag(i);
             dotView.setOnClickListener(this);
         }
-
+        gameController = new GameController(getActivity(), dotIdArray, dotStatusArray);
+        gameController.startGame();
         // Return layout view
         return rootView;
+    }
+
+    @Override
+    public void onPause(){
+        gameController.pauseGame();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume(){
+        gameController.resumeGame();
+        super.onResume();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -94,7 +102,11 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         DotView dv = (DotView) view;
-        dv.toggleLight();
+        int tag = (Integer) dv.getTag();
+        // If array element is lit up light it down
+        if (dotStatusArray[tag]) {
+            dv.toggleLight();
+        }
     }
 
     /**
