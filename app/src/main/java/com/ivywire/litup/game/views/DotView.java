@@ -102,4 +102,5 @@ public class DotView extends View {
         litUp = !litUp;
         super.invalidate();
     }
+
 }

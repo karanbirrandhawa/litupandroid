@@ -109,6 +109,8 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         int tag = (Integer) dv.getTag();
         // If array element is lit up light it down
         if (dotStatusArray[tag]) {
+            gameController.setGameScore(gameController.getGameScore() + 10);
+            Log.d("Score", "Current score is" + gameController.getGameScore());
             dv.toggleLight();
             dotStatusArray[tag] = new Boolean(!dotStatusArray[tag]);
         }
