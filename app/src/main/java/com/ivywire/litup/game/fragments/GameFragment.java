@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -17,12 +18,17 @@ import android.widget.TextView;
 import com.ivywire.litup.R;
 import com.ivywire.litup.game.logic.GameController;
 import com.ivywire.litup.game.views.DotView;
+import com.ivywire.resources.FontManager;
+
+import org.w3c.dom.Text;
 
 import java.util.Arrays;
 
 public class GameFragment extends Fragment implements View.OnClickListener{
    // GameController handle game logic
     GameController gameController;
+    boolean isPaused;
+
     // Int array to hold resource ids of all DotViews
     final int[] dotIdArray  = {
         R.id.dot0, R.id.dot1, R.id.dot2,  R.id.dot3,  R.id.dot4,  R.id.dot5,  R.id.dot6,
@@ -34,6 +40,10 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     Boolean[] dotStatusArray = new Boolean[25];
 
     private OnFragmentInteractionListener mListener;
+
+    // Views
+    TextView timerLabelView;
+    TextView scoreView;
 
     public GameFragment() {
         // Required empty public constructor
@@ -54,6 +64,28 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         View rootView = inflater.inflate(R.layout.fragment_game, container, false);
         TableLayout table = (TableLayout) rootView.findViewById(R.id.dotTable);
 
+        // Style views
+        TextView timerLabel = (TextView) rootView.findViewById(R.id.timeLabelView);
+        FontManager.applyFont(getActivity(), timerLabel, "fonts/Raleway-Regular.otf");
+        timerLabelView = (TextView) rootView.findViewById(R.id.timeView);
+        FontManager.applyFont(getActivity(), timerLabelView, "fonts/Raleway-Bold.otf");
+        scoreView = (TextView) rootView.findViewById(R.id.scoreView);
+        FontManager.applyFont(getActivity(), timerLabelView, "fonts/Raleway-ExtraBold.otf");
+        Button haltButton = (Button) rootView.findViewById(R.id.haltButton);
+        isPaused = false;
+        haltButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str = isPaused ? "Resume" : "Pause";
+                Log.d("1", str);
+                if (isPaused) {
+                    gameController.resumeGame();
+                } else {
+                    gameController.pauseGame();
+                }
+                isPaused = !isPaused;
+            }
+        });
         Arrays.fill(dotStatusArray, false);
 
         for (int i = 0; i < 25; i++) {
@@ -61,6 +93,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
             dotView.setTag(i);
             dotView.setOnClickListener(this);
         }
+
         gameController = new GameController(getActivity(), dotIdArray, dotStatusArray);
         gameController.startGame();
         // Return layout view
@@ -110,7 +143,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         // If array element is lit up light it down
         if (dotStatusArray[tag]) {
             gameController.setGameScore(gameController.getGameScore() + 10);
-            Log.d("Score", "Current score is" + gameController.getGameScore());
+            scoreView.setText("" + gameController.getGameScore());
             dv.toggleLight();
             dotStatusArray[tag] = new Boolean(!dotStatusArray[tag]);
         }
