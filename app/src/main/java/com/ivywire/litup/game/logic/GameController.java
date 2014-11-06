@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ivywire.litup.GameActivity;
 import com.ivywire.litup.R;
 import com.ivywire.litup.game.views.DotView;
 
@@ -18,7 +19,7 @@ import java.util.TimerTask;
  * Created by KaranDesktop on 10/12/2014.
  */
 public class GameController {
-    private Context context;
+    private GameActivity context;
     private View rootView;
     private GameCountDownTimer timer;
     private CountDownTimer counterTimer;
@@ -32,9 +33,11 @@ public class GameController {
     private int countDownInterval;
     private int counter;
 
+    private boolean isFrozen;
+
     private int gameScore;
 
-    public GameController(final Context context, final int[]dotIdArray, final Boolean[] dotStatusArray) {
+    public GameController(final GameActivity context, final int[]dotIdArray, final Boolean[] dotStatusArray) {
         this.context = context;
         rootView = ((Activity)context).getWindow().getDecorView().findViewById(android.R.id.content);
         this.dotIdArray = dotIdArray;
@@ -44,6 +47,9 @@ public class GameController {
         countDownTime = 5*1000; // 5 seconds for the first bit
         countDownInterval = 1500; // start with a 2 second gap between dots lighting up
         counter = 60;
+
+        isFrozen = false;
+
         gameScore = 0; // start with a score of zero
 
         // The runnable obect responsible for
@@ -64,9 +70,11 @@ public class GameController {
                     }
                 } while (dotStatusArray[index]);
 
-                DotView dotView = (DotView) rootView.findViewById(dotIdArray[index]);
-                dotView.toggleLight();
-                dotStatusArray[index] = new Boolean(!dotStatusArray[index]);
+                if (!isFrozen) {
+                    DotView dotView = (DotView) rootView.findViewById(dotIdArray[index]);
+                    dotView.toggleLight();
+                    dotStatusArray[index] = new Boolean(!dotStatusArray[index]);
+                }
 
             }
         };
@@ -100,12 +108,14 @@ public class GameController {
     }
 
     public void startGame() {
+        isFrozen = false;
         timer.enableTimer();
         timer.start();
         counterTimer.start();
     }
 
     public void pauseGame() {
+        isFrozen = true;
         timer.disableTimer();
         timer.cancel();
         counterTimer.cancel();

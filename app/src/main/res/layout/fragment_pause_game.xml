@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ivywire.litup.game.fragments.PauseGameFragment"
+    android:background="@color/green1">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart Game"
+        android:id="@+id/restartBtn"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="25dp"
+        android:textSize="24sp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resume Game"
+        android:id="@+id/resumeBtn"
+        android:layout_above="@+id/restartBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="25dp"
+        android:textSize="24sp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit Game"
+        android:id="@+id/quitBtn"
+        android:layout_below="@+id/restartBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="25dp"
+        android:textSize="24sp"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

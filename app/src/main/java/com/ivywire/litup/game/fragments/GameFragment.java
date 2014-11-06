@@ -15,6 +15,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.ivywire.litup.GameActivity;
 import com.ivywire.litup.R;
 import com.ivywire.litup.game.logic.GameController;
 import com.ivywire.litup.game.views.DotView;
@@ -27,7 +28,6 @@ import java.util.Arrays;
 public class GameFragment extends Fragment implements View.OnClickListener{
    // GameController handle game logic
     GameController gameController;
-    boolean isPaused;
 
     // Int array to hold resource ids of all DotViews
     final int[] dotIdArray  = {
@@ -58,7 +58,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_game, container, false);
@@ -72,18 +72,11 @@ public class GameFragment extends Fragment implements View.OnClickListener{
         scoreView = (TextView) rootView.findViewById(R.id.scoreView);
         FontManager.applyFont(getActivity(), timerLabelView, "fonts/Raleway-ExtraBold.otf");
         Button haltButton = (Button) rootView.findViewById(R.id.haltButton);
-        isPaused = false;
+        FontManager.applyFont(getActivity(), haltButton, "fonts/Raleway-SemiBold.otf");
         haltButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str = isPaused ? "Resume" : "Pause";
-                Log.d("1", str);
-                if (isPaused) {
-                    gameController.resumeGame();
-                } else {
-                    gameController.pauseGame();
-                }
-                isPaused = !isPaused;
+                ((GameActivity) getActivity()).pauseGameActivity(gameController);
             }
         });
         Arrays.fill(dotStatusArray, false);
@@ -94,7 +87,7 @@ public class GameFragment extends Fragment implements View.OnClickListener{
             dotView.setOnClickListener(this);
         }
 
-        gameController = new GameController(getActivity(), dotIdArray, dotStatusArray);
+        gameController = new GameController((GameActivity) getActivity(), dotIdArray, dotStatusArray);
         gameController.startGame();
         // Return layout view
         return rootView;

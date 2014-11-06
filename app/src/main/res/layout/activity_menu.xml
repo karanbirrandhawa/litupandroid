@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="200dp"
+        android:layout_height="210dp"
         android:background="#498477">
 
         <TextView
@@ -42,7 +42,7 @@
         android:layout_weight="1">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Settings"
             android:id="@+id/menuSettings"
@@ -50,12 +50,15 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp"
-            android:padding="17dp"
             android:background="@drawable/menu_button"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="High Scores"
             android:id="@+id/menuHighScores"
@@ -63,12 +66,15 @@
             android:layout_above="@+id/menuSettings"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp"
-            android:padding="17dp"
             android:background="@drawable/menu_button"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="Play Game"
             android:id="@+id/menuPlayGame"
@@ -76,9 +82,12 @@
             android:layout_above="@+id/menuHighScores"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp"
-            android:padding="17dp"
             android:background="@drawable/menu_button"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp" />
     </RelativeLayout>
 
 </LinearLayout>

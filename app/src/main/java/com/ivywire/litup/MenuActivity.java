@@ -8,6 +8,8 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,6 +26,10 @@ public class MenuActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // make full screen activity
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_menu);
         // Assign activity ctx
         ctx = this;
@@ -97,6 +103,6 @@ public class MenuActivity extends Activity implements View.OnClickListener{
     // Method to style menu buttons TODO: Change to appropriate style
     @SuppressLint("ResourceAsColor")
     private void menuButtonStyle(Button button) {
-        FontManager.applyFont(this, button, "fonts/Raleway-Bold.otf");
+        FontManager.applyFont(this, button, "fonts/Raleway-SemiBold.otf");
     }
 }
