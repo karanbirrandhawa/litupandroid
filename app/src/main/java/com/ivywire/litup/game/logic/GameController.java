@@ -132,6 +132,7 @@ public class GameController {
         pauseGame();
 
         // Respond to game ending on screen
+        ((GameActivity) context).completeGameActivity(gameScore);
     }
 
     public int randomIndex() {

@@ -8,14 +8,20 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.ivywire.litup.game.fragments.CompleteGameFragment;
 import com.ivywire.litup.game.fragments.GameFragment;
 import com.ivywire.litup.game.fragments.PauseGameFragment;
 import com.ivywire.litup.game.logic.GameController;
 
 
-public class GameActivity extends Activity implements GameFragment.OnFragmentInteractionListener, PauseGameFragment.OnFragmentInteractionListener {
+public class GameActivity extends Activity
+        implements GameFragment.OnFragmentInteractionListener,
+                     PauseGameFragment.OnFragmentInteractionListener,
+                     CompleteGameFragment.OnFragmentInteractionListener {
+
     GameFragment game;
     PauseGameFragment pause;
+    CompleteGameFragment complete;
     GameController controller;
 
     @Override
@@ -69,6 +75,13 @@ public class GameActivity extends Activity implements GameFragment.OnFragmentInt
                 .commit();
     }
 
+    public void completeGameActivity(int score) {
+        complete = CompleteGameFragment.newInstance(score);
+
+        getFragmentManager().beginTransaction()
+                .replace(R.id.gameContainer, complete)
+                .commit();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

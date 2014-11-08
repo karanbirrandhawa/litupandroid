@@ -36,7 +36,7 @@ public class MenuActivity extends Activity implements View.OnClickListener{
 
         // Apply fonts
         TextView menuTitle = (TextView) findViewById(R.id.menuTitle);
-        FontManager.applyFont(this, menuTitle, "fonts/Raleway-Light.otf");
+        FontManager.applyFont(this, menuTitle, "fonts/Raleway-SemiBold.otf");
 //        String text = "<font color='#488475'>Lit</font><font color='#5aa592'>Up!</font>";
 //        menuTitle.setText(Html.fromHtml(text), TextView.BufferType.SPANNABLE);
 

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ivywire.litup.game.fragments.CompleteGameFragment"
+    android:background="@color/green1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Score"
+        android:id="@+id/scoreLabel"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="15dp"
+        android:textIsSelectable="false"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="1200"
+        android:id="@+id/scoreView"
+        android:layout_below="@+id/scoreLabel"
+        android:layout_centerHorizontal="true"
+        android:textSize="70sp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:id="@+id/playAgainBtn"
+        android:layout_marginTop="106dp"
+        android:layout_below="@+id/scoreView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/menu_button"
+        android:textColor="@color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="22sp" />
+
+    <Button
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="Back to Main Menu"
+        android:id="@+id/mainMenuBtn"
+        android:layout_below="@+id/playAgainBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/menu_button"
+        android:textColor="@color/white"
+        android:layout_marginTop="35dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="22sp" />
+</RelativeLayout>
