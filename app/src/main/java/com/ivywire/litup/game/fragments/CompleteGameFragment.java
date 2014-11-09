@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.ivywire.litup.GameActivity;
 import com.ivywire.litup.MenuActivity;
 import com.ivywire.litup.R;
+import com.ivywire.litup.game.logic.HighScoreManager;
 import com.ivywire.resources.FontManager;
 
 /**
@@ -30,6 +31,7 @@ public class CompleteGameFragment extends Fragment {
     private static final String ARG_SCORE  = "score";
 
     private int score;
+    private boolean hasScore;
 
     private OnFragmentInteractionListener mListener;
 
@@ -57,6 +59,9 @@ public class CompleteGameFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             score = getArguments().getInt(ARG_SCORE);
+            hasScore = true;
+        } else {
+            hasScore = false;
         }
     }
 
@@ -94,6 +99,11 @@ public class CompleteGameFragment extends Fragment {
         });
 
         // Useing HighScoreManager update high score
+        if (hasScore) {
+            HighScoreManager manager = HighScoreManager.getInstance(getActivity()); // get instance
+            manager.addScore(score); // add score
+            manager.deleteInstance(); // delete instance when done
+        }
         return rootview;
     }
 
