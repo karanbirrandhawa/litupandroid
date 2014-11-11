@@ -173,18 +173,22 @@ public class GameController {
             countDownTime = (10 - counterDifference) * 1000;
             countDownInterval = 500; // Medium (500)
 
-        } else if (counter > 30 && counter < 46) {
+        } else if (counter > 10 && counter < 46) {
 
             int counterDifference = 45 - counter;
-            countDownTime = (15 - counterDifference) * 1000;
+            countDownTime = (35 - counterDifference) * 1000;
             countDownInterval = 250; // Fast (250)
-
-        } else if (counter < 31) {
-
-            int counterDifference = 30 - counter;
-            countDownTime = (30 - counterDifference) * 1000;
-            countDownInterval = 100; // Very fast (100)
+        } else if (counter < 11) {
+            int counterDifference = 10 - counter;
+            countDownTime = (10 - counterDifference) * 1000;
+            countDownInterval = 200; // Fast (250)
         }
+//        } else if (counter < 31) {
+//
+//            int counterDifference = 30 - counter;
+//            countDownTime = (30 - counterDifference) * 1000;
+//            countDownInterval = 100; // Very fast (100)
+//        }
 //        } else if (counter > 25 && counter < 31) {
 //
 //            int counterDifference = 30 - counter;

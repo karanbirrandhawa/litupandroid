@@ -55,7 +55,8 @@
             android:paddingTop="17dp"
             android:paddingBottom="17dp"
             android:paddingRight="22dp"
-            android:paddingLeft="22dp" />
+            android:paddingLeft="22dp"
+            android:clickable="false" />
 
         <Button
             android:layout_width="170dp"
