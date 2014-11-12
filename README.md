@@ -5,11 +5,7 @@ An Android game based on hitting lit up dots within a time limit. The entire pro
 
 __Author__: _Karanbir Randhawa_ (via karanbirrandhawa and smogi accounts).
 
-<img src="screenshots/Screenshot_menu.png" alt="Main Menu" style="width:100px;height:250px">
-![Main Menu](screenshots/Screenshot_menu.png =250px)
-![Game](screenshots/Screenshot_game.png)
-![Game Menu](screenshots/Screenshot_game_menu.png)
-![High Scores](screenshots/Screenshot_high_scores.png)
+![Main Menu](screenshots/Screenshot_menu.png =250px) ![Game](screenshots/Screenshot_game.png) ![Game Menu](screenshots/Screenshot_game_menu.png) ![High Scores](screenshots/Screenshot_high_scores.png)
 
 # About the Game
 
