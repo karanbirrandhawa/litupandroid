@@ -5,10 +5,10 @@ An Android game similar to wackamole, but with a 5 by 5 grids and dots. The enti
 
 __Author__: _Karanbir Randhawa_ (via karanbirrandhawa and smogi accounts).
 
-![Main Menu](screenshots/Screenshot_menu)
-![Game](screenshots/Screenshot_game)
-![Game Menu](screenshots/Screenshot_menu)
-![Main Menu](screenshots/Screenshot_menu)
+![Main Menu](screenshots/Screenshot_menu.png)
+![Game](screenshots/Screenshot_game.png)
+![Game Menu](screenshots/Screenshot_game_menu.png)
+![High Scores](screenshots/Screenshot_high_scores.png)
 
 # About the Game
 
