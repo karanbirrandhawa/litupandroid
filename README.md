@@ -1,3 +1,5 @@
+**WARNING: BROKEN ON 4.4L - 5.0. Tested and working on 4.3 and below.**
+
 litupandroid
 ============
 
